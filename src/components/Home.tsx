@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 
 import styled from "@emotion/styled";
 import { searchByName } from "../api/jinkan";
-import { IJinkanData, ITest } from "../api/jinkan/types";
+import { IJinkanData } from "../api/jinkan/types";
 
 // adding a ? makes variable optional in an interface
 interface HomeProps {
@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Home: FC<HomeProps> = (props) => {
-  const [data, setData] = useState<any>();
+  const [data, setData] = useState<IJinkanData[]>();
   const x = props.x;
   const y = props.y;
 
